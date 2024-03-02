@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+#  web:
+#    image: joaopinheiro/php:8.2.4
+#    container_name: web
+#    build:
+#      context: .
+#      dockerfile: ./docker/default/Dockerfile
+#      args:
+#        PHP_VERSION: '8.2.4-fpm-bullseye'
+#    # volumes:
+#    #   - ./app:/var/www/app
+#    ports:
+#      - "80:80"
+#      - "443:443"
+
+  web-octane:
+    image: joaopinheiro/php:8.2.4-octane
+    container_name: web-octane
+    build:
+      context: .
+      dockerfile: ./docker/octane/Dockerfile
+      args:
+        PHP_VERSION: '8.2.4-bullseye'
+    # volumes:
+    #   - ./app:/var/www/app
+    ports:
+      - "80:80"
+      - "443:443"
